@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">338Project2</string>
+    <string name="app_name">Capital Shopping</string>
+    <string name="login">Log In!</string>
+    <string name="signup">Sign Up!</string>
+    <string name="loginMessage">Please log in.</string>
+    <string name="loginEnterUser">Enter Username:</string>
+    <string name="loginEnterPass">Enter Password:</string>
+    <string name="WelcomeMessage">Welcome, </string>
+    <string name="adminButton">Admin</string>
+    <string name="logoutButton">Log out</string>
 </resources>
