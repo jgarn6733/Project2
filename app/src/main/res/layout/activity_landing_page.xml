@@ -59,4 +59,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:id="@+id/shopButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameText"
+        app:layout_constraintVertical_bias="0.166"
+        android:text="@string/shopButton"
+        android:textSize="30sp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ public class LandingPage extends AppCompatActivity {
     User user;
     TextView usernameDisplay;
     Button logoutButton;
+    Button shopButton;
     Button adminButton;
 
     UserDAO userDAO;
@@ -37,6 +38,7 @@ public class LandingPage extends AppCompatActivity {
         usernameDisplay = binding.UsernameText;
         logoutButton = binding.logoutButton;
         adminButton = binding.adminButton;
+        shopButton = binding.shopButton;
         user = userDAO.getUserByUserId(userId);
 
         if (user.isAdmin()) {
@@ -52,6 +54,14 @@ public class LandingPage extends AppCompatActivity {
                 editor.apply();
                 Intent intent = MainActivity.intentFactory(getApplicationContext());
                 startActivity(intent);
+            }
+        });
+
+        shopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newIntent = ShopActivity.intentFactory(getApplicationContext());
+                startActivity(newIntent);
             }
         });
     }

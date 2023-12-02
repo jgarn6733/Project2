@@ -8,4 +8,6 @@
     <string name="WelcomeMessage">Welcome, </string>
     <string name="adminButton">Admin</string>
     <string name="logoutButton">Log out</string>
+    <string name="returnButton">Return to home</string>
+    <string name="shopButton">Go shopping!</string>
 </resources>
