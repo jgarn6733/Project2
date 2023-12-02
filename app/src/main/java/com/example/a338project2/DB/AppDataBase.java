@@ -12,11 +12,14 @@ import com.example.a338project2.User;
 public abstract class AppDataBase extends RoomDatabase {
     public static final String DATABASE_NAME = "Users.db";
     public static final String USERS_TABLE = "users_table";
+    public static final String ITEMS_TABLE = "items_table";
+    public static final String CARTS_TABLE = "carts_table";
 
     private static volatile AppDataBase instance;
     private static final Object LOCK = new Object();
 
     public abstract UserDAO UserDAO();
+    public abstract ItemDAO ItemDAO();
 
     public static AppDataBase getInstance(Context context) {
         if (instance == null) {

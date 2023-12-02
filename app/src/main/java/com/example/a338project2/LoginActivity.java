@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         login = binding.loginSubmitButton;
         UsersList = UserDAO.getUsers();
         if (UsersList.size() <= 0) {
-            User testUser = new User("testuser1", "testuser1", 1, false);
-            User admin = new User("admin2", "admin2", 2, true);
+            User testUser = new User("testuser1", "testuser1", false);
+            User admin = new User("admin2", "admin2", true);
             UserDAO.insert(testUser, admin);
         }
 
