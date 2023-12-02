@@ -10,4 +10,5 @@
     <string name="logoutButton">Log out</string>
     <string name="returnButton">Return to home</string>
     <string name="shopButton">Go shopping!</string>
+    <string name="cartButton">View your cart</string>
 </resources>

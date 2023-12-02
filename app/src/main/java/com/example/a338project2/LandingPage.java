@@ -20,6 +20,7 @@ public class LandingPage extends AppCompatActivity {
     TextView usernameDisplay;
     Button logoutButton;
     Button shopButton;
+    Button cartButton;
     Button adminButton;
 
     UserDAO userDAO;
@@ -39,6 +40,8 @@ public class LandingPage extends AppCompatActivity {
         logoutButton = binding.logoutButton;
         adminButton = binding.adminButton;
         shopButton = binding.shopButton;
+        cartButton = binding.cartButton;
+
         user = userDAO.getUserByUserId(userId);
 
         if (user.isAdmin()) {
@@ -61,6 +64,13 @@ public class LandingPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent newIntent = ShopActivity.intentFactory(getApplicationContext());
+                startActivity(newIntent);
+            }
+        });
+        cartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newIntent = CartActivity.intentFactory(getApplicationContext());
                 startActivity(newIntent);
             }
         });
