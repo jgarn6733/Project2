@@ -11,4 +11,6 @@
     <string name="returnButton">Return to home</string>
     <string name="shopButton">Go shopping!</string>
     <string name="cartButton">View your cart</string>
+    <string name="search">Search for an item</string>
+    <string name="searchButton">Search!</string>
 </resources>
