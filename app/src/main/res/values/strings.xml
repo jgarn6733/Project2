@@ -13,4 +13,7 @@
     <string name="cartButton">View your cart</string>
     <string name="search">Search for an item</string>
     <string name="searchButton">Search!</string>
+    <string name="total">Total: </string>
+    <string name="clear">Clear cart</string>
+    <string name="purchase">Purchase!</string>
 </resources>

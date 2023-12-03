@@ -4,6 +4,7 @@ import androidx.room.PrimaryKey;
 
 import com.example.a338project2.DB.ItemDAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
@@ -51,5 +52,17 @@ public class Cart {
             itemList.add(newItem);
             return true;
         }
+    }
+
+    public void clear() {
+        itemList = new ArrayList<>();
+        price = 0;
+    }
+
+    public int purchase() {
+        int total = price;
+        price = 0;
+        itemList = new ArrayList<>();
+        return total;
     }
 }
