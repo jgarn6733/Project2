@@ -28,8 +28,7 @@ public class LandingPage extends AppCompatActivity {
     Button adminButton;
 
     UserDAO userDAO;
-    ItemDAO itemDAO;
-    CartDAO cartDAO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +38,7 @@ public class LandingPage extends AppCompatActivity {
         binding = ActivityLandingPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        itemDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME)
-                .build().ItemDAO();
-        cartDAO = Room.databaseBuilder(this,AppDataBase.class, AppDataBase.DATABASE_NAME)
-                .build().CartDAO();
+
 
         Intent intent = getIntent();
         int userId = intent.getIntExtra("UserId", 0);

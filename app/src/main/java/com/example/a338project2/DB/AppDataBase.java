@@ -6,9 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.a338project2.Cart;
+import com.example.a338project2.Item;
 import com.example.a338project2.User;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, Item.class, Cart.class}, version = 1)
 public abstract class AppDataBase extends RoomDatabase {
     public static final String DATABASE_NAME = "Users.db";
     public static final String USERS_TABLE = "users_table";

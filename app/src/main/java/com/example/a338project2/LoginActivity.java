@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.a338project2.DB.AppDataBase;
+import com.example.a338project2.DB.CartDAO;
+import com.example.a338project2.DB.ItemDAO;
 import com.example.a338project2.DB.UserDAO;
 import com.example.a338project2.databinding.ActivityLoginBinding;
 
@@ -28,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
 
     UserDAO UserDAO;
+    ItemDAO itemDAO;
+    CartDAO cartDAO;
     List<User> UsersList;
 
     @Override
@@ -40,6 +44,10 @@ public class LoginActivity extends AppCompatActivity {
 
         UserDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME)
                 .build().UserDAO();
+        itemDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME)
+                .build().ItemDAO();
+        cartDAO = Room.databaseBuilder(this,AppDataBase.class, AppDataBase.DATABASE_NAME)
+                .build().CartDAO();
 
         username = binding.loginUsername;
         password = binding.loginPassword;
