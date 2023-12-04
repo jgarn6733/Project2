@@ -6,6 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".ItemActivity">
 
+    <TextView
+        android:id="@+id/TitleTextView3"
+        android:layout_width="406dp"
+        android:layout_height="115dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#1d62f5"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/ItemName"
+        android:layout_width="406dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleTextView3"
+        app:layout_constraintVertical_bias="0.037"
+        android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/ItemDesc"
+        android:layout_width="406dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemName"
+        app:layout_constraintVertical_bias="0.037"
+        android:textSize="50sp"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="123dp"
+        android:layout_height="77dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDesc"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="123dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDesc"
+        app:layout_constraintVertical_bias="0.53"
+        android:text="@string/returnButton"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

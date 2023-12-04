@@ -16,4 +16,5 @@
     <string name="total">Total: </string>
     <string name="clear">Clear cart</string>
     <string name="purchase">Purchase!</string>
+    <string name="add">Add to Cart!</string>
 </resources>
