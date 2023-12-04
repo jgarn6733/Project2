@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.a338project2.DB.CartDAO;
 import com.example.a338project2.databinding.ActivityCartBinding;
@@ -64,7 +65,8 @@ public class CartActivity extends AppCompatActivity {
 
     private void purchaseCart(int userId) {
         Cart cart = cartDao.getCart(userId);
-        int total = cart.purchase();
+        Double total = cart.purchase();
+        Toast.makeText(this, "Cart purchased for" + total.toString(), Toast.LENGTH_SHORT).show();
     }
 
     private void clearCart(int userId) {

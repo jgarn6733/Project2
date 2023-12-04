@@ -12,7 +12,7 @@ import com.example.a338project2.User;
 
 @Database(entities = {User.class, Item.class, Cart.class}, version = 1)
 public abstract class AppDataBase extends RoomDatabase {
-    public static final String DATABASE_NAME = "Users.db";
+    public static final String DATABASE_NAME = "CapitalShopping.db";
     public static final String USERS_TABLE = "users_table";
     public static final String ITEMS_TABLE = "items_table";
     public static final String CARTS_TABLE = "carts_table";

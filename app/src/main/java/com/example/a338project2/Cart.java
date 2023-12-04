@@ -15,10 +15,10 @@ public class Cart {
     private int cartId;
 
     private ArrayList<Item> itemList;
-    private int price;
+    private Double price;
 
 
-    public Cart(ArrayList<Item> itemList, int price) {
+    public Cart(ArrayList<Item> itemList, Double price) {
         this.itemList = itemList;
         this.price = price;
     }
@@ -39,15 +39,16 @@ public class Cart {
         this.itemList = itemList;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
     public boolean addItem(int itemId) {
+        ItemDAO itemDao;
         Item newItem = itemDao.getItemById(itemId);
         if (newItem == null) {
             return false;
@@ -59,12 +60,12 @@ public class Cart {
 
     public void clear() {
         itemList = new ArrayList<>();
-        price = 0;
+        price = 0.0;
     }
 
-    public int purchase() {
-        int total = price;
-        price = 0;
+    public Double purchase() {
+        Double total = price;
+        price = 0.0;
         itemList = new ArrayList<>();
         return total;
     }
