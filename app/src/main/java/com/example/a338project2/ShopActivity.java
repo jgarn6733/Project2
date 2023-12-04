@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.a338project2.DB.ItemDAO;
 import com.example.a338project2.databinding.ActivityShopBinding;
@@ -24,6 +25,7 @@ public class ShopActivity extends AppCompatActivity {
     Button returnButton;
     Button searchButton;
     EditText searchTerm;
+    ItemDAO itemDao;
 
 
     @Override
@@ -50,9 +52,15 @@ public class ShopActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = ItemActivity.intentFactory(getApplicationContext());
-                intent.putExtra("itemName", searchTerm.getText().toString());
-                startActivity(intent);
+                String name = searchTerm.getText().toString();
+                Item item = itemDao.getItemByName(name);
+                if (item != null) {
+                    Intent intent = ItemActivity.intentFactory(getApplicationContext());
+                    intent.putExtra("itemName", name);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ShopActivity.this, "Item not found", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

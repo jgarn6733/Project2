@@ -14,11 +14,11 @@ public class Cart {
     @PrimaryKey(autoGenerate = true)
     private int cartId;
 
-    private List<Item> itemList;
+    private ArrayList<Item> itemList;
     private int price;
     private ItemDAO itemDao;
 
-    public Cart(List<Item> itemList, int price) {
+    public Cart(ArrayList<Item> itemList, int price) {
         this.itemList = itemList;
         this.price = price;
     }
@@ -31,11 +31,11 @@ public class Cart {
         this.cartId = cartId;
     }
 
-    public List<Item> getItemList() {
+    public ArrayList<Item> getItemList() {
         return itemList;
     }
 
-    public void setItemList(List<Item> itemList) {
+    public void setItemList(ArrayList<Item> itemList) {
         this.itemList = itemList;
     }
 
