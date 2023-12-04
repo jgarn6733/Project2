@@ -1,12 +1,15 @@
 package com.example.a338project2;
 
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.a338project2.DB.AppDataBase;
 import com.example.a338project2.DB.ItemDAO;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity(tableName = AppDataBase.CARTS_TABLE)
 public class Cart {
     @PrimaryKey(autoGenerate = true)
     private int cartId;

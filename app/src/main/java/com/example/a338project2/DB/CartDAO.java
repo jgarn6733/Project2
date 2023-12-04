@@ -7,7 +7,6 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.a338project2.Cart;
-import com.example.a338project2.User;
 
 @Dao
 public interface CartDAO {
